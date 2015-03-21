@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^.*$ - [S=44]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [S=44]
+RewriteRule ^(.*)$ index.php?id=$1
