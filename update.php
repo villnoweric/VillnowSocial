@@ -1,9 +1,11 @@
 <?php
-include('functions.php');
-	if(isset($_POST['message'])) {
-		$message = $_POST['message'];
-		$sql = "INSERT INTO posts (user, date, content) VALUES ('" . $_SESSION['ID'] . "','" . date("Y-m-d H:i:s") . "','" . $message ."')";
-		$con->query($sql);
-	}
-	header('Location: ./');
+require_once('functions.php');
+require_once('config.php');
+
+if(isset($_POST['message'])) {
+	$user = $_SESSION['ID'];
+	$data = $_POST['message'];
+	vs_post($user, $data, $con);
+}
+
 ?>

@@ -1,6 +1,7 @@
 <?php
 //BEGIN
-include('functions.php');
+require_once('config.php');
+require_once('functions.php');
 //CHECK USER FOR SIGN IN
 if(isset($_POST['email'])){
 	$result = mysqli_query($con,"SELECT * FROM `users` WHERE email='" . $_POST['email'] . "' OR username='" . $_POST['email'] . "'");
