@@ -1,7 +1,6 @@
 <?php
 //BEGIN
-session_start();
-$con = mysqli_connect('127.0.0.1', 'villnoweric', '', 'social');
+include('functions.php');
 //CHECK USER FOR SIGN IN
 if(isset($_POST['email'])){
 	$result = mysqli_query($con,"SELECT * FROM `users` WHERE email='" . $_POST['email'] . "' OR username='" . $_POST['email'] . "'");
