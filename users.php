@@ -25,7 +25,7 @@ if(empty($profilepic)){
 				<div class="row panel">
 					<div class="col-md-4 bg_blur">
 					<?php if($username == $_SESSION['username']){}else{?>
-						<a href="#" class="follow_btn">Follow</a>
+						<a href="update.php?follow=1&user=<?php echo $_SESSION['ID']; ?>&data=<?php echo $ID; ?>" class="follow_btn">Follow</a>
 						<?php }?>
 					</div>
 					<div class="col-md-8  col-xs-12">
