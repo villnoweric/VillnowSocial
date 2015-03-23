@@ -1,7 +1,7 @@
         <link href='css/profile.css' rel='stylesheet' type='text/css'>
 		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h3 class="page-header"><?php echo $_SESSION['fname'] . ' ' . $_SESSION['lname']; ?>'s Feed</h3>
-		  <div class="col-sm-9 col-sm-offset-3 col-md-10 main">
+          <h3 class="page-header">Your Feed</h3>
+		  <div class="col-sm-12 main">
 										<div class="container-fluid" style="">
 										<div class="row">
 		  <?php
@@ -10,7 +10,7 @@
 			$sql = "SELECT * FROM USERS WHERE user_id IN ($ids)";
 			$result = mysqli_query($con,"SELECT * FROM `posts` WHERE user IN ($ids) ORDER BY date DESC");
 			if(mysqli_num_rows($result)==0) {
-			echo '<div class="col-xs-12 col-sm-offset-2 col-sm-5 panel search">';
+			echo '<div class="col-xs-12 panel search">';
 			echo 'Follow Somebody First';
 			echo '</div>';
 			}else {
@@ -25,7 +25,7 @@
 			$URL = $rows['URL'];
 			}
 			
-			echo '<div class="col-xs-12 col-sm-offset-2 col-sm-5 panel search">';
+			echo '<div class="col-xs-8 col-xs-offset-4 panel post">';
 			echo '<img src="images/profile/' . $profile . '.jpg" class="img-thumbnail img" />';
 			echo '<b><a href="' . $URL . '">' . $fname . ' ' . $lname . '</a></b><br>';
 			echo $row['content'];
