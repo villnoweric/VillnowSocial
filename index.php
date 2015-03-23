@@ -24,7 +24,7 @@ if(isset($_POST['email'])){
 		$_SESSION['profile'] = $row['profile'];
 		$pass = $row['password'];
 	}
-	$passhash = hash(md5, $_POST['password']);
+	$passhash = hash('md5', $_POST['password']);
 	
 	// INCORRECT PASSWORD
 	if($pass !== $passhash){
