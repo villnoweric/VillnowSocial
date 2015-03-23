@@ -5,7 +5,7 @@
 										<div class="container-fluid" style="">
 										<div class="row">
 		  <?php
-		    $user_ids = array(1,3);
+		    $user_ids = vs_feed($_SESSION['ID'], $con);
 			$ids = join(',',$user_ids);  
 			$sql = "SELECT * FROM USERS WHERE user_id IN ($ids)";
 			$result = mysqli_query($con,"SELECT * FROM `posts` WHERE user IN ($ids) ORDER BY date DESC");
