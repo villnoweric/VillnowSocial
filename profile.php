@@ -27,14 +27,13 @@
 				<div class="row">
 					
 						<?php
-							$result = mysqli_query($con,"SELECT * FROM `posts` WHERE user='" . $_SESSION['ID'] . "'");
+							$result = mysqli_query($con,"SELECT * FROM `posts` WHERE user='" . $_SESSION['ID'] . "' ORDER BY date DESC");
 							
 							while($row = mysqli_fetch_array($result)) {
-							echo '<div class="col-md-4">
-					</div>';
+								echo '<div class="col-md-4"></div>';
 								echo '<div class="col-md-8  col-xs-12 panel post">';
 								echo '<img src="images/profile/' . $_SESSION['profile'] . '.jpg" class="img" />';
-								echo '<b>' . $_SESSION['fname'] . ' ' . $_SESSION['lname'] . '</b><br>Shared Publicly - ' . $row['date'] . '<br>';
+								echo '<b>' . $_SESSION['fname'] . ' ' . $_SESSION['lname'] . '</b><br>';
 								echo $row['content'];
 								echo "</div>";
 							}
