@@ -25,7 +25,7 @@
 			$URL = $rows['URL'];
 			}
 			
-			echo '<div class="col-xs-8 col-xs-offset-4 panel post">';
+			echo '<div class="col-xs-12 col-md-8 col-md-offset-4 panel post">';
 			echo '<img src="images/profile/' . $profile . '.jpg" class="img-thumbnail img" />';
 			echo '<b><a href="' . $URL . '">' . $fname . ' ' . $lname . '</a></b><br>';
 			echo $row['content'];

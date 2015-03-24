@@ -53,9 +53,8 @@ header('Location: index.php');
 			  <li><a href="signout">Sign Out</a></li>
 			  <li class="divider"></li>
 			  <li><a href="help">Help</a></li>
-			  <li><a href="report">Report a Problem</a></li>
 			  <li class="dropdown-header">V 0.3</li>
-			  <li class="dropdown-header">&copy; Eric Villnow 2015 - mrNTUSfrcjM66hEH</li>
+			  <li class="dropdown-header">&copy; Eric Villnow 2015</li>
               </ul>
             </li>
           </ul>
