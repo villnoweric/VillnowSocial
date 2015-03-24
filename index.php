@@ -74,11 +74,11 @@ if($_GET['id'] == 'search'){
 if(empty($_SESSION['log'])) {
 	include('signin.php');
 }
-// DIRECT ACCESS TO INDEX WILL BRING YOU HERE... (PROFILE)
+// DIRECT ACCESS TO INDEX WILL BRING YOU HERE... (FEED)
 if(isset($_SESSION['log'])) {
 	$_SESSION['page'] = 'Profile';
 	include('header.php');
-	include('profile.php');
+	include('feed.php');
 	include('footer.php');
 }
 ?>
